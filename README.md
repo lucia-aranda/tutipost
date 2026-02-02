@@ -1,7 +1,7 @@
 <div align="center">
   <br>
-  <img alt="jn" src="img/" width="150px">
-  <h1>🌼 Tumblr 🌷</h1>
+  <img alt="jn" src="img/tumblr-1.jpg" width="150px" style="border-radius: 20px;">
+  <h1>🌷 Tumblr 🌷</h1>
   <strong>This contains HTML Tumblr customizable templates and resources that you can use for your posts! *:･ﾟ✧</strong>
 </div>
 
