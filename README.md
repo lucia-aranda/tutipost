@@ -15,17 +15,17 @@ Or any other code editor you like. And internet conection 🌐 to propertly load
 
 ## Concept
 
-This repository storages basic styling tags that are already supported by Tumblr, such as: 🕯️🪐
+This repository storages basic styling tags that are already supported by Tumblr, such as:
 
 ```
 <p>, <div>, <br>, <b>/<strong>, <i>, <em>, <u>, <s>/<strike>, <h1> to <h6>, <font>, <img>, <a>, <hr>, <ul>, <li> and <ol>
 ```
-Among some css code to improve their style.
+Among some css code to improve their style.📀
 
 It focuses on structure and design, which can help you understand a lil bit how html works and have a template where to start.
-You can use this to customize your own post. 📒📜
+You can use this to customize your own post.📜
 
-This will to help you make tumblr posts prettier. ✨📀
+This will to help you make tumblr posts prettier.🪐
 
 ## Use case
 
