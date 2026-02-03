@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tumblr HTML Editor</title>
+    <!-- Page's icon -->
+    <link rel="icon" href="img/tumblr-2.png">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Source -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Crimson+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>✨ Tumblr HTML Live Editor</h1>
+        <p class="subtitle">Code on the left, preview on the right — desktop & mobile views in real-time</p>
+    </div>
+
+    <div class="container">
+        <div class="editor-panel">
+            <div class="panel-header">
+                <span>HTML Editor</span>
+                <span class="icon">⌨️</span>
+            </div>
+            <div class="toolbar">
+                <button onclick="insertTag('<b>', '</b>')">Bold</button>
+                <button onclick="insertTag('<i>', '</i>')">Italic</button>
+                <button onclick="insertTag('<u>', '</u>')">Underline</button>
+                <button onclick="insertTag('<font color=&quot;#ff69b4&quot;>', '</font>')">Color</button>
+                <button onclick="insertTag('<p align=&quot;center&quot;>', '</p>')">Center</button>
+                <button onclick="insertTag('<hr>', '')">Line</button>
+                <!-- <button class="secondary" onclick="clearEditor()">Clear</button> -->
+                <button class="secondary" onclick="loadExample()">Example</button>
+                <a href="guide.html"><button class="secondary">Guide</button></a>
+            </div>
+            <div class="editor-wrapper">
+                <div class="line-numbers" id="lineNumbers">1</div>
+                <textarea id="htmlInput" placeholder="<!-- Start typing your HTML code here... -->
+
+Example:
+<p align=&quot;center&quot;>
+  <font size=&quot;5&quot; color=&quot;#ff69b4&quot;>
+    <b>✨ Hello Tumblr! ✨</b>
+  </font>
+</p>"></textarea>
+            </div>
+        </div>
+
+        <div class="preview-panel">
+            <div class="preview-container desktop-preview">
+                <div class="panel-header">
+                    <span>Desktop Preview</span>
+                    <span class="icon">🖥️</span>
+                </div>
+                <div class="preview-frame">
+                    <div class="device-label">Desktop View</div>
+                    <div class="preview-content" id="desktopPreview">
+                        <div class="empty-state">
+                            <div class="empty-state-icon">👆</div>
+                            <div class="empty-state-text">Start coding to see your preview here</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-container mobile-preview">
+                <div class="panel-header">
+                    <span>Mobile Preview</span>
+                    <span class="icon">📱</span>
+                </div>
+                <div class="preview-frame">
+                    <div class="device-label">Mobile View (375px)</div>
+                    <div class="preview-content" id="mobilePreview">
+                        <div class="empty-state">
+                            <div class="empty-state-icon">👆</div>
+                            <div class="empty-state-text">Start coding to see your preview here</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const htmlInput = document.getElementById('htmlInput');
+        const desktopPreview = document.getElementById('desktopPreview');
+        const mobilePreview = document.getElementById('mobilePreview');
+        const lineNumbers = document.getElementById('lineNumbers');
+
+        // Update preview in real-time
+        function updatePreview() {
+            const htmlCode = htmlInput.value;
+            desktopPreview.innerHTML = htmlCode || '<div class="empty-state"><div class="empty-state-icon">👆</div><div class="empty-state-text">Start coding to see your preview here</div></div>';
+            mobilePreview.innerHTML = htmlCode || '<div class="empty-state"><div class="empty-state-icon">👆</div><div class="empty-state-text">Start coding to see your preview here</div></div>';
+        }
+
+        // Update line numbers
+        function updateLineNumbers() {
+            const lines = htmlInput.value.split('\n').length;
+            let lineNumbersHTML = '';
+            for (let i = 1; i <= lines; i++) {
+                lineNumbersHTML += i + '\n';
+            }
+            lineNumbers.innerHTML = lineNumbersHTML.replace(/\n/g, '<br>');
+        }
+
+        // Insert HTML tag
+        function insertTag(openTag, closeTag) {
+            const start = htmlInput.selectionStart;
+            const end = htmlInput.selectionEnd;
+            const selectedText = htmlInput.value.substring(start, end);
+            const beforeText = htmlInput.value.substring(0, start);
+            const afterText = htmlInput.value.substring(end);
+            
+            htmlInput.value = beforeText + openTag + selectedText + closeTag + afterText;
+            
+            // Set cursor position
+            const newCursorPos = start + openTag.length + selectedText.length + closeTag.length;
+            htmlInput.setSelectionRange(newCursorPos, newCursorPos);
+            htmlInput.focus();
+            
+            updatePreview();
+            updateLineNumbers();
+        }
+
+        // Clear editor
+        function clearEditor() {
+            if (confirm('Are you sure you want to clear all your code?')) {
+                htmlInput.value = '';
+                updatePreview();
+                updateLineNumbers();
+            }
+        }
+
+        // Load example
+        function loadExample() {
+            const example = `<p align="center">
+            <font size="6" color="#9b59b6">
+                <b><i>✨ Aesthetic Post ✨</i></b>
+            </font>
+            </p>
+
+            <hr style="border: 2px solid #ff69b4;">
+
+            <p align="center">
+            <span style="background: linear-gradient(to right, #ff6b6b, #4ecdc4, #45b7d1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 24px; font-weight: bold;">
+                Rainbow Gradient Text
+            </span>
+            </p>
+
+            <p align="center">
+            <font color="#4ecdc4">This is some centered text in cyan!</font>
+            </p>
+
+            <hr style="border: 3px dotted #45b7d1;">
+
+            <p>
+            <font face="Georgia" size="4">
+                Mix <b>bold</b>, <i>italic</i>, and <u>underline</u> styles!
+            </font>
+            </p>
+
+            <p align="right">
+            <font color="#ff6b9d" size="3">
+                <i>— Right aligned signature ✨</i>
+            </font>
+            </p>`;
+            
+            htmlInput.value = example;
+            updatePreview();
+            updateLineNumbers();
+        }
+
+        // Event listeners
+        htmlInput.addEventListener('input', () => {
+            updatePreview();
+            updateLineNumbers();
+        });
+
+        htmlInput.addEventListener('scroll', () => {
+            lineNumbers.scrollTop = htmlInput.scrollTop;
+        });
+
+        // Tab key support
+        htmlInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                e.preventDefault();
+                const start = htmlInput.selectionStart;
+                const end = htmlInput.selectionEnd;
+                htmlInput.value = htmlInput.value.substring(0, start) + '  ' + htmlInput.value.substring(end);
+                htmlInput.selectionStart = htmlInput.selectionEnd = start + 2;
+            }
+        });
+
+        // Initialize
+        updateLineNumbers();
+        updatePreview();
+    </script>
+</body>
+</html>

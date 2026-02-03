@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tumblr HTML Styling Guide</title>
+    <!-- Page's icon -->
+    <link rel="icon" href="img/tumblr-2.png">
+    <!-- Stylesheet -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            /* background: #dcc3f5; */
+            background-image: url('img/cute.webp');
+            background-size:contain;
+            zoom: 80%;
+        }
+        .example-section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .code-section {
+            background: #f5f5f5;
+            padding: 15px;
+            border-left: 4px solid #333;
+            margin: 10px 0;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+        .button{
+            background: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 15px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+<a href="index.html"><button class="button">Go back to editor</button></a>
+
+<h1>Tumblr HTML Styling Guide 🌷</h1>
+
+<div class="example-section">
+    <h2>1. GRADIENT TEXT (Using inline CSS)</h2>
+    <div class="code-section">
+&lt;span style="background: linear-gradient(to right, #ff6b6b, #4ecdc4, #45b7d1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 30px; font-weight: bold;"&gt;Rainbow Gradient Text&lt;/span&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <span style="background: linear-gradient(to right, #ff6b6b, #4ecdc4, #45b7d1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 30px; font-weight: bold;">Rainbow Gradient Text</span>
+</div>
+
+<div class="example-section">
+    <h2>2. CURSIVE/ITALIC TEXT</h2>
+    <div class="code-section">
+&lt;i&gt;This text is in italics&lt;/i&gt;<br>
+&lt;em&gt;This is also italic (emphasized)&lt;/em&gt;<br>
+&lt;span style="font-family: cursive;"&gt;This uses cursive font&lt;/span&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <i>This text is in italics</i><br>
+    <em>This is also italic (emphasized)</em><br>
+    <span style="font-family: cursive;">This uses cursive font</span>
+</div>
+
+<div class="example-section">
+    <h2>3. BOLD TEXT</h2>
+    <div class="code-section">
+&lt;b&gt;This is bold&lt;/b&gt;<br>
+&lt;strong&gt;This is also bold (strong)&lt;/strong&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <b>This is bold</b><br>
+    <strong>This is also bold (strong)</strong>
+</div>
+
+<div class="example-section">
+    <h2>4. NORMAL TEXT</h2>
+    <div class="code-section">
+&lt;p&gt;This is just normal paragraph text.&lt;/p&gt;<br>
+Just plain text with no tags works too!
+    </div>
+    <p><strong>Result:</strong></p>
+    <p>This is just normal paragraph text.</p>
+    Just plain text with no tags works too!
+</div>
+
+<div class="example-section">
+    <h2>5. DIFFERENT FONT STYLES</h2>
+    <div class="code-section">
+&lt;font face="Arial"&gt;Arial Font&lt;/font&gt;<br>
+&lt;font face="Georgia"&gt;Georgia Font&lt;/font&gt;<br>
+&lt;font face="Courier New"&gt;Courier New Font&lt;/font&gt;<br>
+&lt;font face="Verdana"&gt;Verdana Font&lt;/font&gt;<br>
+&lt;span style="font-family: monospace;"&gt;Monospace Font&lt;/span&gt;<br>
+&lt;span style="font-family: fantasy;"&gt;Fantasy Font&lt;/span&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <font face="Arial">Arial Font</font><br>
+    <font face="Georgia">Georgia Font</font><br>
+    <font face="Courier New">Courier New Font</font><br>
+    <font face="Verdana">Verdana Font</font><br>
+    <span style="font-family: monospace;">Monospace Font</span><br>
+    <span style="font-family: fantasy;">Fantasy Font</span>
+</div>
+
+<div class="example-section">
+    <h2>6. HORIZONTAL COLORED LINES</h2>
+    <div class="code-section">
+&lt;hr&gt;<br>
+&lt;hr style="border: 2px solid #ff6b6b;"&gt;<br>
+&lt;hr style="border: 3px dotted #4ecdc4;"&gt;<br>
+&lt;hr style="border: 5px dashed #45b7d1;"&gt;<br>
+&lt;hr style="border: none; height: 10px; background: linear-gradient(to right, #ff6b6b, #4ecdc4, #45b7d1);"&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <hr>
+    <hr style="border: 2px solid #ff6b6b;">
+    <hr style="border: 3px dotted #4ecdc4;">
+    <hr style="border: 5px dashed #45b7d1;">
+    <hr style="border: none; height: 10px; background: linear-gradient(to right, #ff6b6b, #4ecdc4, #45b7d1);">
+</div>
+
+<div class="example-section">
+    <h2>7. VERTICAL COLORED LINES (Using borders)</h2>
+    <div class="code-section">
+&lt;span style="border-left: 5px solid #ff6b6b; padding-left: 10px;"&gt;Text with left border&lt;/span&gt;<br>
+&lt;span style="border-right: 5px solid #4ecdc4; padding-right: 10px;"&gt;Text with right border&lt;/span&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <span style="border-left: 5px solid #ff6b6b; padding-left: 10px;">Text with left border</span><br>
+    <span style="border-right: 5px solid #4ecdc4; padding-right: 10px;">Text with right border</span>
+</div>
+
+<div class="example-section">
+    <h2>8. TEXT ALIGNMENT</h2>
+    <div class="code-section">
+&lt;p align="left"&gt;Left aligned text (default)&lt;/p&gt;<br>
+&lt;p align="center"&gt;Center aligned text&lt;/p&gt;<br>
+&lt;p align="right"&gt;Right aligned text&lt;/p&gt;<br>
+&lt;div style="text-align: justify;"&gt;Justified text spreads out across the full width&lt;/div&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <p align="left">Left aligned text (default)</p>
+    <p align="center">Center aligned text</p>
+    <p align="right">Right aligned text</p>
+    <div style="text-align: justify;">Justified text spreads out across the full width of the container, making both the left and right edges line up evenly. This is especially noticeable with longer paragraphs.</div>
+</div>
+
+<div class="example-section">
+    <h2>9. COLORED TEXT</h2>
+    <div class="code-section">
+&lt;font color="#ff0000"&gt;Red text&lt;/font&gt;<br>
+&lt;font color="#00ff00"&gt;Green text&lt;/font&gt;<br>
+&lt;font color="#0000ff"&gt;Blue text&lt;/font&gt;<br>
+&lt;span style="color: #ff69b4;"&gt;Hot pink text&lt;/span&gt;<br>
+&lt;span style="color: #9b59b6;"&gt;Purple text&lt;/span&gt;<br>
+&lt;span style="color: #f39c12;"&gt;Orange text&lt;/span&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <font color="#ff0000">Red text</font><br>
+    <font color="#00ff00">Green text</font><br>
+    <font color="#0000ff">Blue text</font><br>
+    <span style="color: #ff69b4;">Hot pink text</span><br>
+    <span style="color: #9b59b6;">Purple text</span><br>
+    <span style="color: #f39c12;">Orange text</span>
+</div>
+
+<div class="example-section">
+    <h2>10. FONT SIZES</h2>
+    <div class="code-section">
+&lt;font size="1"&gt;Size 1 (smallest)&lt;/font&gt;<br>
+&lt;font size="3"&gt;Size 3 (default)&lt;/font&gt;<br>
+&lt;font size="5"&gt;Size 5&lt;/font&gt;<br>
+&lt;font size="7"&gt;Size 7 (largest)&lt;/font&gt;<br>
+&lt;span style="font-size: 10px;"&gt;10px size&lt;/span&gt;<br>
+&lt;span style="font-size: 24px;"&gt;24px size&lt;/span&gt;<br>
+&lt;span style="font-size: 40px;"&gt;40px size&lt;/span&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <font size="1">Size 1 (smallest)</font><br>
+    <font size="3">Size 3 (default)</font><br>
+    <font size="5">Size 5</font><br>
+    <font size="7">Size 7 (largest)</font><br>
+    <span style="font-size: 10px;">10px size</span><br>
+    <span style="font-size: 24px;">24px size</span><br>
+    <span style="font-size: 40px;">40px size</span>
+</div>
+
+<div class="example-section">
+    <h2>11. LINKS</h2>
+    <div class="code-section">
+&lt;a href="https://www.tumblr.com"&gt;Link to Tumblr&lt;/a&gt;<br>
+&lt;a href="https://www.tumblr.com" style="color: #ff69b4; text-decoration: none;"&gt;Styled pink link&lt;/a&gt;<br>
+&lt;a href="https://www.tumblr.com" style="color: #9b59b6; font-weight: bold;"&gt;Bold purple link&lt;/a&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <a href="https://www.tumblr.com">Link to Tumblr</a><br>
+    <a href="https://www.tumblr.com" style="color: #ff69b4; text-decoration: none;">Styled pink link</a><br>
+    <a href="https://www.tumblr.com" style="color: #9b59b6; font-weight: bold;">Bold purple link</a>
+</div>
+
+<div class="example-section">
+    <h2>12. IMAGES</h2>
+    
+    <h3>Basic Image:</h3>
+    <div class="code-section">
+&lt;img src="IMAGE_LINK"&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <img style="width: 100px;" src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052">
+    
+    <h3>Image with Size Control:</h3>
+    <div class="code-section">
+&lt;img src="IMAGE_LINK" width="200"&gt;<br>
+&lt;img src="IMAGE_LINK" height="150"&gt;<br>
+&lt;img src="IMAGE_LINK" style="width: 250px; height: auto;"&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" width="200"><br>
+    <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" height="150"><br>
+    <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" style="width: 250px; height: auto;">
+    
+    <h3>Image Alignment:</h3>
+    <div class="code-section">
+&lt;p align="center"&gt;<br>
+&nbsp;&nbsp;&lt;img src="IMAGE_LINK" width="200"&gt;<br>
+&lt;/p&gt;<br><br>
+&lt;img src="IMAGE_LINK" align="left" width="150"&gt; Text wraps around left-aligned image...<br><br>
+&lt;img src="IMAGE_LINK" align="right" width="150"&gt; Text wraps around right-aligned image...
+    </div>
+    <p><strong>Result:</strong></p>
+    <p align="center">
+        <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" width="200">
+    </p>
+    <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" align="left" width="150" style="margin-right: 10px;"> This text wraps around the left-aligned image. You can write a whole paragraph here and it will flow nicely around the image. Great for creating magazine-style layouts!
+    <br clear="all"><br>
+    
+    <h3>Images with Borders & Styling:</h3>
+    <div class="code-section">
+&lt;!-- Solid border --&gt;<br>
+&lt;img src="IMAGE_LINK" style="border: 5px solid #ff69b4;"&gt;<br><br>
+&lt;!-- Dashed border --&gt;<br>
+&lt;img src="IMAGE_LINK" style="border: 3px dashed #4ecdc4;"&gt;<br><br>
+&lt;!-- Rounded corners --&gt;<br>
+&lt;img src="IMAGE_LINK" style="border-radius: 15px;"&gt;<br><br>
+&lt;!-- Circle image --&gt;<br>
+&lt;img src="IMAGE_LINK" style="border-radius: 50%; width: 150px; height: 150px;"&gt;<br><br>
+&lt;!-- Shadow effect --&gt;<br>
+&lt;img src="IMAGE_LINK" style="box-shadow: 5px 5px 15px rgba(0,0,0,0.3);"&gt;<br><br>
+&lt;!-- Multiple effects combined --&gt;<br>
+&lt;img src="IMAGE_LINK" style="border: 3px solid #ff69b4; border-radius: 10px; box-shadow: 0 4px 8px rgba(255,105,180,0.3);"&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" style="border: 5px solid #ff69b4;" width="200"><br><br>
+    <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" style="border: 3px dashed #4ecdc4;" width="200"><br><br>
+    <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" style="border-radius: 15px;" width="200"><br><br>
+    <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" style="border-radius: 50%; width: 150px; height: 150px;"><br><br>
+    <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" style="box-shadow: 5px 5px 15px rgba(0,0,0,0.3);" width="200"><br><br>
+    <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" style="border: 3px solid #ff69b4; border-radius: 10px; box-shadow: 0 4px 8px rgba(255,105,180,0.3);" width="200">
+    
+    <h3>Clickable Images (Image as Link):</h3>
+    <div class="code-section">
+&lt;a href="WEB_PAGE_URL" style="text-decoration: none;"&gt;<br>
+&nbsp;&nbsp;&lt;img src="IMAGE_LINK" width="200"&gt;<br>
+&lt;/a&gt;<br><br>
+&lt;!-- Image link with border on hover --&gt;<br>
+&lt;a href="WEB_PAGE_URL"&gt;<br>
+&nbsp;&nbsp;&lt;img src="IMAGE_LINK" style="border: 2px solid transparent; transition: border 0.3s;" onmouseover="this.style.border='2px solid #ff69b4'" onmouseout="this.style.border='2px solid transparent'"&gt;<br>
+&lt;/a&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <a href="https://www.tumblr.com" style="text-decoration: none;">
+        <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" width="200">
+    </a>
+    <a href="https://www.tumblr.com">
+        <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" width="200" style="border: 2px solid transparent; transition: border 0.3s;" onmouseover="this.style.border='2px solid #ff69b4'" onmouseout="this.style.border='2px solid transparent'">
+    </a>
+    
+    <h3>Multiple Images Side by Side:</h3>
+    <div class="code-section">
+&lt;p align="center"&gt;<br>
+&nbsp;&nbsp;&lt;img src="IMAGE_LINK" width="150"&gt;<br>
+&nbsp;&nbsp;&lt;img src="IMAGE_LINK" width="150"&gt;<br>
+&nbsp;&nbsp;&lt;img src="IMAGE_LINK" width="150"&gt;<br>
+&lt;/p&gt;<br><br>
+&lt;!-- With spacing --&gt;<br>
+&lt;img src="IMAGE_LINK" style="margin: 5px;" width="100"&gt;<br>
+&lt;img src="IMAGE_LINK" style="margin: 5px;" width="100"&gt;<br>
+&lt;img src="IMAGE_LINK" style="margin: 5px;" width="100"&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <p align="center">
+        <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" width="150">
+        <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" width="150">
+        <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" width="150">
+    </p>
+    <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" style="margin: 5px;" width="100">
+    <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" style="margin: 5px;" width="100">
+    <img src="https://preview.redd.it/i-make-cute-pastel-art-recently-opened-commissions-v0-fndz0dy8zz6b1.jpg?auto=webp&s=81c262c69dd6722a6843742329385e9df4568052" style="margin: 5px;" width="100">
+    
+    <h3>GIFs (same as images!):</h3>
+    <div class="code-section">
+&lt;img src="IMAGE_LINK" width="250"&gt;<br>
+&lt;img src="GIF_LINK" width="250"&gt;
+    </div>
+    <p><strong>Note:</strong> GIFs work exactly like regular images - just use the GIF URL!</p>
+    
+    <h3>📝 Image Tips:</h3>
+    <ul style="margin-top: 1rem;">
+        <li><strong>Where to get image URLs:</strong> Upload to Tumblr first, then right-click → "Copy image address" OR use external hosting like Imgur, Giphy (for GIFs)</li>
+        <li><strong>Responsive sizing:</strong> Use percentages like <code>width="100%"</code> for images that adjust to screen size</li>
+        <li><strong>Keep aspect ratio:</strong> Only set width OR height (not both) to avoid distortion</li>
+        <li><strong>Alt text (accessibility):</strong> <code>&lt;img src="URL" alt="Description"&gt;</code></li>
+        <li><strong>Spacing around images:</strong> Use <code>style="margin: 10px;"</code> or <code>hspace="10" vspace="10"</code></li>
+    </ul>
+</div>
+
+<div class="example-section">
+    <h2>13. ADDITIONAL STYLING</h2>
+    
+    <h3>Underline & Strikethrough:</h3>
+    <div class="code-section">
+&lt;u&gt;Underlined text&lt;/u&gt;<br>
+&lt;s&gt;Strikethrough text&lt;/s&gt;<br>
+&lt;strike&gt;Also strikethrough&lt;/strike&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <u>Underlined text</u><br>
+    <s>Strikethrough text</s><br>
+    <strike>Also strikethrough</strike>
+    
+    <h3>Superscript & Subscript:</h3>
+    <div class="code-section">
+E = mc&lt;sup&gt;2&lt;/sup&gt;<br>
+H&lt;sub&gt;2&lt;/sub&gt;O
+    </div>
+    <p><strong>Result:</strong></p>
+    E = mc<sup>2</sup><br>
+    H<sub>2</sub>O
+    
+    <h3>Background Colors:</h3>
+    <div class="code-section">
+&lt;span style="background-color: #ffff00;"&gt;Yellow highlight&lt;/span&gt;<br>
+&lt;span style="background-color: #ff69b4; color: white; padding: 5px;"&gt;Pink background&lt;/span&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <span style="background-color: #ffff00;">Yellow highlight</span><br>
+    <span style="background-color: #ff69b4; color: white; padding: 5px;">Pink background</span>
+    
+    <h3>Headers:</h3>
+    <div class="code-section">
+&lt;h1&gt;Header 1&lt;/h1&gt;<br>
+&lt;h2&gt;Header 2&lt;/h2&gt;<br>
+&lt;h3&gt;Header 3&lt;/h3&gt;<br>
+&lt;h4&gt;Header 4&lt;/h4&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <h1>Header 1</h1>
+    <h2>Header 2</h2>
+    <h3>Header 3</h3>
+    <h4>Header 4</h4>
+    
+    <h3>Blockquote:</h3>
+    <div class="code-section">
+&lt;blockquote&gt;This is a quoted section&lt;/blockquote&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <blockquote>This is a quoted section</blockquote>
+    
+    <h3>Spacing:</h3>
+    <div class="code-section">
+Text&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;with&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;spaces<br>
+&lt;br&gt;&lt;br&gt; for line breaks
+    </div>
+    <p><strong>Result:</strong></p>
+    Text&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;spaces<br><br> Multiple line breaks above
+</div>
+
+<div class="example-section">
+    <h2>14. COMBINING STYLES</h2>
+    <div class="code-section">
+&lt;p align="center"&gt;<br>
+&nbsp;&nbsp;&lt;font size="6" color="#9b59b6"&gt;&lt;b&gt;&lt;i&gt;✨ Aesthetic Post ✨&lt;/i&gt;&lt;/b&gt;&lt;/font&gt;<br>
+&lt;/p&gt;<br>
+&lt;hr style="border: 2px solid #ff69b4;"&gt;<br>
+&lt;p align="center"&gt;<br>
+&nbsp;&nbsp;&lt;span style="color: #4ecdc4;"&gt;Mix and match different styles&lt;/span&gt;<br>
+&lt;/p&gt;
+    </div>
+    <p><strong>Result:</strong></p>
+    <p align="center">
+        <font size="6" color="#9b59b6"><b><i>✨ Aesthetic Post ✨</i></b></font>
+    </p>
+    <hr style="border: 2px solid #ff69b4;">
+    <p align="center">
+        <span style="color: #4ecdc4;">Mix and match different styles</span>
+    </p>
+</div>
+
+<div class="example-section">
+    <h2>📝 NOTES:</h2>
+    <ul>
+        <li><strong>Tumblr Compatibility:</strong> Some advanced CSS might get stripped when you save. Stick to basic inline styles for best results.</li>
+        <li><strong>Hex Colors:</strong> Use # followed by 6 characters (e.g., #ff69b4 for pink)</li>
+        <li><strong>Testing:</strong> Always preview your post before publishing</li>
+        <li><strong>Mobile:</strong> Keep in mind how your post looks on mobile devices</li>
+        <li><strong>Accessibility:</strong> Don't use color as the only way to convey information</li>
+    </ul>
+</div>
+
+</body>
+</html>
