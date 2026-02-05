@@ -1,7 +1,7 @@
 <div align="center">
   <br>
   <img alt="jn" src="img/tutipost.png" width="150px">
-  <h1>🌷 TutiPost 🌷</h1>
+  <h1>🌷 tutipost 🌷</h1>
   <strong>This contains HTML editor and guide that you can use for your posts! *:･ﾟ✧</strong>
 </div>
 
