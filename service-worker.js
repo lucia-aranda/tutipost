@@ -1,11 +1,11 @@
-const CACHE_NAME = 'cache-tumblrEditor-v1';
+const CACHE_NAME = 'cache-tutipostEditor-v1';
 const urlsToCache = [
   '/',
   '/index.html',
   '/guide.html',
   '/css/style.css',
   '/img/cute.webp',
-  '/img/tumblr-2.png',
+  '/img/tutipost.png',
 ];
 
 self.addEventListener('install', event => {

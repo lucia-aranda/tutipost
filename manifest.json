@@ -1,25 +1,25 @@
 { 
     "start_url": "/",
-    "short_name": "Tumblr: editor and guide",  
-    "name": "Tumblr: editor and guide",  
-    "description": "Real time Tumblr HTML post editor with both, desktop and mobile views, and a guide that you can use to improve your posts.",  
+    "short_name": "tutipost",  
+    "name": "tutipost",  
+    "description": "Real time HTML post editor with both, desktop and mobile views, and a guide that you can use to improve your posts.",  
     "background_color": "#dcc3f5",  
     "theme_color": "#dcc3f5",  
     "orientation": "portrait",  
     "display": "standalone",  
     "icons":[
       {  
-        "src": "img/tumblr_xxxhdpi.png",  
+        "src": "img/tutipost_xxxhdpi.png",  
         "type": "image/png",  
         "sizes": "192x192"
       },
       {
-        "src": "img/tumblr_xxhdpi.png",  
+        "src": "img/tutipost_xxhdpi.png",  
         "type": "image/png",  
         "sizes": "144x144"
       },
       {
-        "src": "img/tumblr_mdpi.png",  
+        "src": "img/tutipost_mdpi.png",  
         "type": "image/png",  
         "sizes": "48x48"
       }

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tumblr HTML Editor</title>
+    <title>tutipost</title>
     <!-- Page's icon -->
-    <link rel="icon" href="img/tumblr-2.png">
+    <link rel="icon" href="img/tutipost.png">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Font Source -->
@@ -29,8 +29,8 @@
 </head>
 <body>
     <div class="header">
-        <h1>✨ Tumblr HTML Live Editor</h1>
-        <p class="subtitle">Code on the left, preview on the right — desktop & mobile views in real-time</p>
+        <h1 class="color">✨ TutiPost HTML Live Editor</h1>
+        <p class="subtitle">Code on the left, preview on the right — desktop & mobile views in real-time (Mostly supported tags below).</p>
     </div>
 
     <div class="container">
@@ -40,13 +40,31 @@
                 <span class="icon">⌨️</span>
             </div>
             <div class="toolbar">
+                <button onclick="insertTag('<span>', '</span>')">Span</button>
+                <button onclick="insertTag('<span style=\'color:;\'>', '</span>')">Color</button>
+                <button onclick="insertTag('<p>', '</p>')">Paragraph</button>
                 <button onclick="insertTag('<b>', '</b>')">Bold</button>
                 <button onclick="insertTag('<i>', '</i>')">Italic</button>
-                <button onclick="insertTag('<u>', '</u>')">Underline</button>
-                <button onclick="insertTag('<font color=&quot;#ff69b4&quot;>', '</font>')">Color</button>
-                <button onclick="insertTag('<p align=&quot;center&quot;>', '</p>')">Center</button>
-                <button onclick="insertTag('<hr>', '')">Line</button>
-                <!-- <button class="secondary" onclick="clearEditor()">Clear</button> -->
+                <button onclick="insertTag('<a>', '</a>')">Link</button>
+                <button onclick="insertTag('<h1>', '</h1>')">Large Text</button>
+                <button onclick="insertTag('<h2>', '</h2>')">Medium Text</button>
+                <button onclick="insertTag('<h3>', '</h3>')">Small Text</button>
+                <button onclick="insertTag('<h4>', '</h4>')">Tiny Text</button>
+                <button onclick="insertTag('<strike>', '</strike>')">Strike</button>
+                <button onclick="insertTag('<blockquote>', '</blockquote>')">Blockquote</button>
+                <button onclick="insertTag('<br>', '')">Jumpline</button>
+                <button onclick="insertTag('&amp;nbsp;', '')">Space</button>
+                <button onclick="insertTag('&amp;hearts;', '')">Heart ♥</button>
+                <button onclick="insertTag('&amp;star;', '')">Star ★</button>
+                <button onclick="insertTag('<b>‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖‖', '</b>')">Stick Line</button>
+                <button onclick="insertTag('<b>⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝⁝', '</b>')">Dot Line</button>
+                <button onclick="insertTag('<b>××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××', '</b>')">Ex Line</button>
+                <button onclick="insertTag('<b>◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊◊', '</b>')">Diamond Line</button>
+                <button onclick="insertTag('<b>♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥', '</b>')">Heart Line</button>
+                <button onclick="insertTag('<b>★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★', '</b>')">Star Line</button>
+                <button onclick="insertTag('<b>______________________________________________________________', '</b>')">Regular Line</button>
+                <button onclick="insertTag('<img src=\'\'>', '')">Image</button>
+                <button class="secondary" onclick="clearEditor()">Delete</button>
                 <button class="secondary" onclick="loadExample()">Example</button>
                 <a href="guide.html"><button class="secondary">Guide</button></a>
             </div>
@@ -57,7 +75,7 @@
 Example:
 <p align=&quot;center&quot;>
   <font size=&quot;5&quot; color=&quot;#ff69b4&quot;>
-    <b>✨ Hello Tumblr! ✨</b>
+    <b>✨ Hello World! ✨</b>
   </font>
 </p>"></textarea>
             </div>
@@ -151,37 +169,198 @@ Example:
 
         // Load example
         function loadExample() {
-            const example = `<p align="center">
-            <font size="6" color="#9b59b6">
-                <b><i>✨ Aesthetic Post ✨</i></b>
+            const example = `
+            <p>
+            <font size="3" style="font-family: monospace;">
+            <img src="https://64.media.tumblr.com/965b27135f5ebbeb470c0cec56428815/e3238a4cf3c8a896-d2/s75x75_c1/4603b59adb3df2a034f238963cc7b8b36535c40b.gifv" width="10">
+            <b>Bla, bla, bla, bla...</b>
             </font>
             </p>
 
-            <hr style="border: 2px solid #ff69b4;">
+            <br>
 
             <p align="center">
             <span style="background: linear-gradient(to right, #ff6b6b, #4ecdc4, #45b7d1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 24px; font-weight: bold;">
-                Rainbow Gradient Text
+            <font size="5" face="Courier New">
+            <b><i>✧･ﾟ:* Blabla! *:･ﾟ✧</i></b>
+            </font>
             </span>
             </p>
 
+            <hr style="border: none; height: 5px; background: linear-gradient(to right, #ff6b6b, #4ecdc4, #45b7d1);">
+
+            <br>
+
             <p align="center">
-            <font color="#4ecdc4">This is some centered text in cyan!</font>
+            <font style="font-family: monospace;">Bla bla bla bla bla bla bla bla bla, <font color="#00D991"><b>Blabla</b></font>, bla bla bla bla bla! bla bla.
+            </font>
             </p>
 
-            <hr style="border: 3px dotted #45b7d1;">
+            <br>
 
             <p>
-            <font face="Georgia" size="4">
-                Mix <b>bold</b>, <i>italic</i>, and <u>underline</u> styles!
+            <font style="font-family: monospace;">
+            Bla <i>Blabla</i> bla bla bla bla <font color="#ff0000"><b>♡</b></font> bla <font color="#ff0000"><b>♡</b></font> bla <font color="#0089DE"><b>↓</b></font> bla <font color="#0089DE"><b>↓</b></font> bla bla bla bla bla bla bla bla bla bla. <span style="background-color: #FFF49E;">Bla bla...</span>
             </font>
             </p>
 
-            <p align="right">
-            <font color="#ff6b9d" size="3">
-                <i>— Right aligned signature ✨</i>
+            <br>
+
+            <p>
+            <font style="font-family: monospace;">
+            <font color="#0089DE">☆•→</font> Bla bla bla bla bla bla bla bla bla
             </font>
-            </p>`;
+            </p>
+
+            <br>
+
+            <p>
+            <font style="font-family: monospace;">
+            <font color="#FF006F">☆•→</font> Bla bla bla bla bla bla bla bla bla
+            </font>
+            </p>
+
+            <br>
+
+            <p>
+            <font style="font-family: monospace;">
+            <font color="#00D991">☆•→</font> Bla bla bla bla bla bla bla bla bla
+            </font>
+            </p>
+
+            <br>
+
+            <p>
+            <font color="808080" style="font-family: monospace;">
+            <span style="border-left: 5px solid #D59EFF; padding-left: 8px;">
+            Bla <b>@Blabla</b>? Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+            </span>
+            </font>
+            </p>
+
+            <br>
+
+            <hr style="border: 3px dotted #D59EFF;">
+
+            <br>
+
+            <p>
+            <font style="font-family: monospace;">
+            <b><u>Bla bla:</u></b>
+            </font>
+            </p>
+
+            <br>
+
+            <p>
+            <font style="font-family: monospace;">
+            <img src="https://github.com/lucia-aranda/exo/blob/main/img/acnh_wand.png?raw=true" style="width: 14px;">
+            Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+            </font>
+            </p>
+
+            <br>
+
+            <p>
+            <font style="font-family: monospace;">
+            <img src="https://github.com/lucia-aranda/exo/blob/main/img/acnh_starfragment.png?raw=true" style="width: 14px;">
+            Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+            <span style="background: linear-gradient(to right, #ff6b6b, #4ecdc4, #45b7d1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold;">
+            ♡*:･ﾟ✧
+            </span>
+            <font color="808080" size="1" style="font-family: monospace;">
+            - Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+            </font>
+            </font>
+            </p>
+
+            <br>
+
+            <p>
+            <font style="font-family: monospace;">
+            <img src="https://github.com/lucia-aranda/exo/blob/main/img/acnh_heartcrystals.webp?raw=true" style="width: 14px;">
+            Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+            </font>
+            </p>
+
+            <br>
+
+            <p>
+            <font style="font-family: monospace;">
+            <img src="https://github.com/lucia-aranda/exo/blob/main/img/acnh_cupcake.png?raw=true" style="width: 14px;">
+            Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+            </font>
+            </p>
+
+            <br>
+
+            <p>
+            <font style="font-family: monospace;">
+            <b><u>Bla bla:</u></b>
+            </font>
+            </p>
+
+            <br>
+
+            <p>
+            <font style="font-family: monospace;">
+            <font color="#0089DE"><b>✧</b></font> Bla bla bla bla bla bla bla bla bla
+            </font>
+            </p>
+
+            <br>
+
+            <p>
+            <font style="font-family: monospace;">
+            <font color="#FF006F"><b>✧</b></font> Bla bla bla bla bla bla bla bla bla
+            </font>
+            </p>
+
+            <br>
+
+            <p>
+            <font style="font-family: monospace;">
+            <font color="#00D991"><b>✧</b></font> Bla bla bla bla bla bla bla bla bla
+            </font>
+            </p>
+
+            <br>
+
+            <hr style="border: 3px dotted #D59EFF;">
+
+            <br>
+
+            <p>
+            <font style="font-family: monospace;">
+            Bla bla... Bla bla bla bla bla bla bla bla bla
+            <font color="#00D991"><b>*:･ﾟ✧</b></font>
+            </font>
+            </p>
+
+            <br>
+
+            <p>
+            <font style="font-family: monospace;">
+            Bla bla <font color="#ff0000"><b><3</b></font>
+            Bla bla bla bla bla bla bla bla bla <font color="#0089DE"><b>:)</b></font>
+            </font>
+            </p>
+
+            <br>
+
+            <p align="right">
+            <font size="3" style="font-family: monospace;">
+            <i>
+            <span style="background: linear-gradient(to right, #ff6b6b, #4ecdc4, #45b7d1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold;">
+            — Bla bla
+            <img src="https://64.media.tumblr.com/3a9e4878370aab9d456574cd2a843112/e3238a4cf3c8a896-73/s75x75_c1/aaf2329b0c7486c56247f8674b1d272c412938fb.gifv" width="10">
+            </span>
+            </i>
+            </font>
+            </p>
+
+            <br>
+            `;
             
             htmlInput.value = example;
             updatePreview();
